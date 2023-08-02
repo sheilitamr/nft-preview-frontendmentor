@@ -4,6 +4,13 @@
   box-sizing: border-box;
 }
 
+:root {
+  --background-color: #0d192c;
+  --card-background: #15263f;
+  --primary-text-color: #8bacd9;
+  --secondary-text-color: #00fff8;
+}
+
 img {
   max-width: 100%;
   display: block;
@@ -22,6 +29,132 @@ a {
 }
 
 body {
-  margin: 0;
-  background-image: url(../assets/images/sleep-cat.jpeg);
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--background-color);
+  font-family: 'Outfit', sans-serif;
+}
+
+.card {
+  width: 327px;
+  background-color: var(--card-background);
+  border-radius: 15px;
+  padding: 24px;
+}
+.card__image {
+  border-radius: 8px;
+  width: 278px;
+  height: 278px;
+}
+
+.card-image-container {
+  position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  .card-image-container:hover .card-image-hover {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 1;
+    background-image: url(../assets/images/icon-view.svg);
+    background-size: 48px 48px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #00fff790;
+  }
+}
+.card__title {
+  font-size: 22px;
+  font-weight: 600;
+  color: white;
+}
+@media screen and (min-width: 768px) {
+  .card__title:hover {
+    color: var(--secondary-text-color);
+    cursor: pointer;
+  }
+}
+
+.card__text {
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--primary-text-color);
+  line-height: 26px;
+  margin-bottom: 16px;
+}
+
+.border-card {
+  border-bottom: 1px solid var(--primary-text-color);
+  margin-bottom: 16px;
+}
+
+.card-data {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .card-data {
+    margin-bottom: 24px;
+  }
+}
+.card-number {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.card-data__number {
+  color: var(--secondary-text-color);
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.card-days {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.card-data__days {
+  display: inline-block;
+  color: var(--primary-text-color);
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+}
+
+.user__image {
+  width: 33px;
+  height: 33px;
+  border: 1px solid white;
+  border-radius: 50%;
+  margin-right: 24px;
+}
+.user__copy,
+.user__name {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--primary-text-color);
+}
+
+.user__name {
+  color: white;
+}
+
+@media screen and (min-width: 768px) {
+  .user__name:hover {
+    color: var(--secondary-text-color);
+    cursor: pointer;
+  }
 }

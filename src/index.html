@@ -4,12 +4,41 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
     <title>Vite App</title>
   </head>
   <body>
-    <h1>Hola</h1>
-    <img src="./assets/images/cute-cat.webp" alt="" />
+    <div class="main-container">
+      <div class="card">
+        <div class="card-image-container">
+          <img src="assets/images/image-equilibrium.jpg" alt="equillibrium image" class="card__image" />
+          <div class="card-image-hover"></div>
+        </div>
+        <h2 class="card__title">Equilibrium #3429</h2>
+        <p class="card__text">Our Equilibrium collection promotes balance and calm.</p>
+
+        <div class="card-data">
+          <div class="card-number">
+            <img src="assets/images/icon-ethereum.svg" alt="icon-ethereum" class="card-data__image-number" />
+            <span class="card-data__number"> 0.041 ETH </span>
+          </div>
+
+          <div class="card-days">
+            <img src="assets/images/icon-clock.svg" alt="icon-clock" class="card-data__image-clock" />
+            <span class="card-data__days">3 days left</span>
+          </div>
+        </div>
+        <div class="border-card"></div>
+        <div class="user">
+          <img src="assets/images/image-avatar.png" alt="avatar image" class="user__image" />
+          <span class="user__copy">Creation of</span>
+          <span class="user__name">Jules Wyvern</span>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
